@@ -13,10 +13,10 @@ npm install react-timeline
 ## Usage
 
 ```tsx
-import { BringgTimeline } from 'react-timeline';
+import { ReactTimeline } from 'react-timeline';
 import 'react-timeline/styles'; // optional: theme CSS variables
 
-<BringgTimeline
+<ReactTimeline
   rows={rows}
   options={{
     minAxisTime: rangeStart,
