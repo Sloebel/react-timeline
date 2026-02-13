@@ -1,0 +1,61 @@
+@use '../../styles/mixins.module.scss' as mixins;
+
+.timelineHeader {
+  width: 100%;
+  height: #{mixins.$time-Axis-Height}px;
+  overflow: hidden;
+
+  color: var(--gray-800);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .daysRow {
+    position: relative;
+    height: #{mixins.$time-Axis-Height - mixins.$row-height}px;
+
+    .dayMarker {
+      position: absolute;
+      height: 100%;
+      border-left: 1px solid var(--gray-150);
+    }
+
+    .dayValue {
+      position: absolute;
+      height: 100%;
+      display: flex;
+      align-items: end;
+      padding: 4px;
+      font-size: 14px;
+    }
+  }
+
+  .hoursRow {
+    position: relative;
+    height: #{mixins.$row-height}px;
+    border-top: 1px solid var(--gray-150);
+    border-bottom: 1px solid var(--gray-150);
+
+    .hourMarker {
+      position: absolute;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 1px;
+        height: 8px;
+        background: var(--gray-150);
+      }
+    }
+
+    .hourValue {
+      transform: translateX(-50%);
+    }
+  }
+}

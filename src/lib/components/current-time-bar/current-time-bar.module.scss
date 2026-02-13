@@ -1,0 +1,30 @@
+@use '../../styles/mixins.module.scss' as mixins;
+
+.currentTimeBar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--sunset);
+  z-index: 1;
+  pointer-events: none;
+}
+
+$top: #{mixins.$time-Axis-Height - mixins.$row-height}px;
+
+.topBar {
+  height: #{mixins.$row-height}px;
+  top: $top;
+
+  &::before {
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid var(--sunset);
+    margin-left: -3px;
+    top: 0;
+  }
+}
