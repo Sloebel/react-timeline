@@ -1,0 +1,49 @@
+@use './styles/mixins.module.scss' as mixins;
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--white-bg);
+}
+
+.grid {
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.shadow {
+  position: absolute;
+  top: #{mixins.$time-Axis-Height}px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    height: 1px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &.scroll {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.timelineContainer {
+  height: 100%;
+  position: relative;
+  background: var(--white-bg);
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}

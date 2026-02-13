@@ -2,6 +2,36 @@
 
 A **virtualized, zoomable timeline grid** for displaying time-bounded items in rows. Built for scheduling, planning, and any “items on a timeline” view (e.g. Gantt-style layouts).
 
+**Requirements:** Node 18+ for development/build. React 18+ as peer dependency.
+
+## Install
+
+```bash
+npm install react-timeline
+```
+
+## Usage
+
+```tsx
+import { BringgTimeline } from 'react-timeline';
+import 'react-timeline/styles'; // optional: theme CSS variables
+
+<BringgTimeline
+  rows={rows}
+  options={{
+    minAxisTime: rangeStart,
+    maxAxisTime: rangeEnd,
+  }}
+  tooltipRenderer={(items) => <YourTooltip items={items} />}
+/>
+```
+
+## Development
+
+- `npm run build` – build the library (Vite)
+- `npm run storybook` – run Storybook (Vite)
+- `npm run test` – run tests (Vitest)
+
 ## Features
 
 - **Rows** – Each row has an id, order, and a list of timeline items.

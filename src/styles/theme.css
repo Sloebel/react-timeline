@@ -1,0 +1,12 @@
+/* Theme variables for react-timeline (fallbacks for standalone use) */
+:root {
+  --white-bg: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-150: #e5e7eb;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-800: #1f2937;
+  --sunset: #f59e0b;
+  --primary-10: #dbeafe;
+}

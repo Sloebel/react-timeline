@@ -1,0 +1,57 @@
+$scroll-bar-height: 10px;
+$scroll-bar-border-radius: $scroll-bar-height;
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.horizontalScroll {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 7px;
+  left: 7px;
+  height: $scroll-bar-height;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:hover {
+    .track {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &.fade {
+    animation: fadeOut;
+    animation-duration: 0.4s;
+    opacity: 0;
+  }
+
+  &.hide {
+    visibility: hidden;
+  }
+
+  .track {
+    border-radius: $scroll-bar-border-radius;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+
+    height: $scroll-bar-height;
+  }
+
+  .thumb {
+    position: absolute;
+    height: $scroll-bar-height;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: $scroll-bar-border-radius;
+  }
+}
