@@ -1,0 +1,98 @@
+$tooltip-width: 420px;
+$arrow-size: 14;
+$shadow-color: rgba(0, 0, 0, 0.25);
+
+:export {
+  arrowSize: $arrow-size;
+}
+
+@mixin baseArrowProps() {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.tooltipContainer {
+  max-width: $tooltip-width;
+  z-index: 1060;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px $shadow-color;
+
+  .tooltipArrow {
+    @include baseArrowProps;
+    width: 0px;
+    height: 0px;
+
+    &::after {
+      @include baseArrowProps;
+      z-index: 1;
+      content: '';
+    }
+  }
+
+ &.bottom {
+    box-shadow: 0 1px 4px $shadow-color;
+
+    .tooltipArrow {
+      bottom: 0;
+
+      &::after {
+        left: -#{$arrow-size}px;
+        border-left: #{$arrow-size}px solid transparent;
+        border-right: #{$arrow-size}px solid transparent;
+        border-top: #{$arrow-size}px solid var(--white-bg);
+        filter: drop-shadow(0px 2px 1px $shadow-color);
+      }
+    }
+  }
+
+  &.top {
+    box-shadow: 0 -1px 4px $shadow-color;
+
+    .tooltipArrow {
+      top: 0;
+
+      &::after {
+        left: -#{$arrow-size}px;
+        top: -#{$arrow-size}px;
+        border-left: #{$arrow-size}px solid transparent;
+        border-right: #{$arrow-size}px solid transparent;
+        border-bottom: #{$arrow-size}px solid var(--white-bg);
+        filter: drop-shadow(0px -2px 1px $shadow-color);
+      }
+    }
+  }
+
+  &.left {
+    box-shadow: -1px 0px 4px $shadow-color;
+
+    .tooltipArrow {
+      left: 0;
+
+      &::after {
+        left: -#{$arrow-size}px;
+        top: -#{$arrow-size}px;
+        border-top: #{$arrow-size}px solid transparent;
+        border-bottom: #{$arrow-size}px solid transparent;
+        border-right: #{$arrow-size}px solid var(--white-bg);
+        filter: drop-shadow(-2px 0px 1px $shadow-color);
+      }
+    }
+  }
+
+  &.right {
+    box-shadow: 1px 0px 4px $shadow-color;
+
+    .tooltipArrow {
+      right: 0;
+
+      &::after {
+        top: -#{$arrow-size}px;
+        border-top: #{$arrow-size}px solid transparent;
+        border-bottom: #{$arrow-size}px solid transparent;
+        border-left: #{$arrow-size}px solid var(--white-bg);
+        filter: drop-shadow(2px 0px 1px $shadow-color);
+      }
+    }
+  }
+}
