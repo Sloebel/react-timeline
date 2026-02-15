@@ -5,7 +5,7 @@
   top: 0;
   height: 100%;
   width: 2px;
-  background-color: var(--sunset);
+  background-color: var(--timeline-now-bar-color);
   z-index: 1;
   pointer-events: none;
 }
@@ -23,7 +23,7 @@ $top: #{mixins.$time-Axis-Height - mixins.$row-height}px;
     position: absolute;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 8px solid var(--sunset);
+    border-top: 8px solid var(--timeline-now-bar-color);
     margin-left: -3px;
     top: 0;
   }

@@ -5,7 +5,8 @@
   height: #{mixins.$time-Axis-Height}px;
   overflow: hidden;
 
-  color: var(--gray-800);
+  background: var(--timeline-axis-bg);
+  color: var(--timeline-axis-color);
 
   &::-webkit-scrollbar {
     display: none;
@@ -18,7 +19,7 @@
     .dayMarker {
       position: absolute;
       height: 100%;
-      border-left: 1px solid var(--gray-150);
+      border-left: 1px solid var(--timeline-grid-line-color);
     }
 
     .dayValue {
@@ -34,8 +35,8 @@
   .hoursRow {
     position: relative;
     height: #{mixins.$row-height}px;
-    border-top: 1px solid var(--gray-150);
-    border-bottom: 1px solid var(--gray-150);
+    border-top: 1px solid var(--timeline-row-border-color);
+    border-bottom: 1px solid var(--timeline-row-border-color);
 
     .hourMarker {
       position: absolute;
@@ -50,7 +51,7 @@
         bottom: 0;
         width: 1px;
         height: 8px;
-        background: var(--gray-150);
+        background: var(--timeline-grid-line-color);
       }
     }
 
