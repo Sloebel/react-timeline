@@ -2,17 +2,48 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root {
-  --white-bg: #ffffff;
-  --gray-50: #f9fafb;
-  --gray-150: #e5e7eb;
-  --gray-200: #e5e7eb;
-  --gray-400: #9ca3af;
-  --gray-500: #6b7280;
-  --gray-800: #1f2937;
-  --sunset: #f59e0b;
-  --primary-10: #dbeafe;
+	--white-bg: #ffffff;
+	--gray-50: #f9fafb;
+	--gray-150: #e5e7eb;
+	--gray-200: #e5e7eb;
+	--gray-400: #9ca3af;
+	--gray-500: #6b7280;
+	--gray-800: #1f2937;
+	--sunset: #f59e0b;
+	--primary-10: #dbeafe;
+
+	/* Timeline grid */
+	--timeline-grid-line-color: var(--gray-150);
+	--timeline-day-line-color: var(--gray-400);
+	--timeline-row-border-color: var(--gray-150);
+	--timeline-row-height: 32px;
+
+	/* Timeline items */
+	--timeline-item-bg: var(--white-bg);
+	--timeline-item-border-color: var(--gray-500);
+	--timeline-item-hover-bg: var(--gray-400);
+	--timeline-item-selected-bg: var(--gray-500);
+	--timeline-item-height: 26px;
+	--timeline-item-radius: 2px;
+
+	/* Time axis */
+	--timeline-axis-bg: var(--white-bg);
+	--timeline-axis-color: var(--gray-800);
+
+	/* Timeline container */
+	--timeline-container-bg: var(--white-bg);
+
+	/* Current time bar */
+	--timeline-now-bar-color: var(--sunset);
+
+	/* Zoom controls */
+	--timeline-controls-bg: var(--gray-50);
+	--timeline-controls-border-color: var(--gray-200);
+	--timeline-controls-button-color: var(--gray-800);
+	--timeline-controls-button-hover-bg: var(--gray-150);
+	--timeline-controls-button-focus-outline: var(--gray-400);
 }

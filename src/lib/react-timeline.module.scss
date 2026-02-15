@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  background: var(--white-bg);
+  background: var(--timeline-container-bg);
 }
 
 .grid {
@@ -42,7 +42,7 @@
 .timelineContainer {
   height: 100%;
   position: relative;
-  background: var(--white-bg);
+  background: var(--timeline-container-bg);
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;

@@ -1,18 +1,16 @@
-$basic-item-color: var(--gray-500);
-
 .item {
   position: absolute;
-  height: 26px;
-  border-radius: 2px;
-  border: 1px solid $basic-item-color;
-  background: var(--white-bg);
+  height: var(--timeline-item-height);
+  border-radius: var(--timeline-item-radius);
+  border: 1px solid var(--timeline-item-border-color);
+  background: var(--timeline-item-bg);
   font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    background: var(--gray-400);
+    background: var(--timeline-item-hover-bg);
 
     &.clickable {
       cursor: pointer;
@@ -20,13 +18,13 @@ $basic-item-color: var(--gray-500);
   }
 
   &.selected {
-    background: $basic-item-color;
+    background: var(--timeline-item-selected-bg);
   }
 
   &.backgroundItem {
     z-index: -1;
     background: var(--primary-10);
     border: 1px solid var(--primary-10);
-    height: 26px;
+    height: var(--timeline-item-height);
   }
 }
