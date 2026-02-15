@@ -3,18 +3,18 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import moment from 'moment';
 
-import ReactTimeline from '../react-timeline';
+import Timeline from '../timeline';
 import { getData } from '../mocks/data';
 import type { TimelineItem, TimelineRow } from '../types';
 
-const meta: Meta<typeof ReactTimeline> = {
-	component: ReactTimeline,
-	title: 'ReactTimeline/Custom Theme'
+const meta: Meta<typeof Timeline> = {
+	component: Timeline,
+	title: 'Timeline/Custom Theme'
 };
 
 export default meta;
 
-type Story = StoryObj<typeof ReactTimeline>;
+type Story = StoryObj<typeof Timeline>;
 
 const { range } = getData();
 
@@ -159,7 +159,7 @@ export const DarkTheme: Story = {
 					</ul>
 				</div>
 				<div style={{ height: 400 }}>
-					<ReactTimeline {...args} />
+					<Timeline {...args} />
 				</div>
 			</div>
 		</>
@@ -190,7 +190,7 @@ export const ColoredItems: Story = {
 					Items colored by status: green = completed, red = overdue, amber = pending
 				</p>
 				<div style={{ height: 320 }}>
-					<ReactTimeline {...args} />
+					<Timeline {...args} />
 				</div>
 			</div>
 		</>
@@ -221,7 +221,7 @@ export const CompactLayout: Story = {
 					Denser layout via --timeline-row-height and --timeline-item-height
 				</p>
 				<div style={{ height: 400 }}>
-					<ReactTimeline {...args} />
+					<Timeline {...args} />
 				</div>
 			</div>
 		</>

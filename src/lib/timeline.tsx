@@ -36,7 +36,7 @@ import useTimeAxis from './hooks/use-time-axis';
 import GridLines from './components/grid-lines/grid-lines';
 import { zoomProvider } from './utils/zoom-provider';
 
-import styles from './react-timeline.module.scss';
+import styles from './timeline.module.scss';
 
 const TIMELINE_GRID_CONTAINER = 'timeline-grid-container';
 const GRID_INNER_SCROLL_CONTAINER = '.ReactVirtualized__Grid__innerScrollContainer';
@@ -60,7 +60,7 @@ const extraScrollRows = (height: number, rowsLength = 0) => (rowsLength * rowHei
 const calcRowsCount = (rows: TimelineRow[], height: number) =>
 	rows?.length > 0 ? rows.length + extraScrollRows(height, rows?.length) : 0;
 
-const ReactTimeline = forwardRef<TimelinePublicApi, Props>(
+const Timeline = forwardRef<TimelinePublicApi, Props>(
 	(
 		{
 			rows,
@@ -291,7 +291,7 @@ const ReactTimeline = forwardRef<TimelinePublicApi, Props>(
 			<>
 				<div
 					className={classNames(styles.timelineContainer, className)}
-					data-testid="react-timeline"
+					data-testid="timeline"
 					onClick={(e: React.MouseEvent) => {
 						onClick?.(e);
 					}}
@@ -339,6 +339,6 @@ const ReactTimeline = forwardRef<TimelinePublicApi, Props>(
 	}
 );
 
-ReactTimeline.displayName = 'ReactTimeline';
+Timeline.displayName = 'Timeline';
 
-export default ReactTimeline;
+export default Timeline;

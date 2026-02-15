@@ -3,18 +3,18 @@ import React, { useRef, useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import moment from 'moment';
 
-import ReactTimeline from './react-timeline';
+import Timeline from './timeline';
 import { getData } from './mocks/data';
 import type { TimelineItem, TimelinePublicApi } from './types';
 
-const meta: Meta<typeof ReactTimeline> = {
-	component: ReactTimeline,
-	title: 'ReactTimeline'
+const meta: Meta<typeof Timeline> = {
+	component: Timeline,
+	title: 'Timeline'
 };
 
 export default meta;
 
-type Story = StoryObj<typeof ReactTimeline>;
+type Story = StoryObj<typeof Timeline>;
 
 const { rows, range } = getData();
 
@@ -76,7 +76,7 @@ const fitRangeTo = {
 	}
 };
 
-const FitRangeExample = (args: React.ComponentProps<typeof ReactTimeline>) => {
+const FitRangeExample = (args: React.ComponentProps<typeof Timeline>) => {
 	const timelineApiRef = useRef<TimelinePublicApi>(null);
 
 	const fitRange = (start: number, end: number) => {
@@ -122,7 +122,7 @@ const FitRangeExample = (args: React.ComponentProps<typeof ReactTimeline>) => {
 					>{`${moment(fitRangeTo.halfAnHour.start).format('D MMM, HH:mm')} -> ${moment(fitRangeTo.halfAnHour.end).format('D MMM, HH:mm')}`}</option>
 				</select>
 			</div>
-			<ReactTimeline {...args} ref={timelineApiRef} className="fit-range-story" />
+			<Timeline {...args} ref={timelineApiRef} className="fit-range-story" />
 		</>
 	);
 };
@@ -158,7 +158,7 @@ export const WithEmptyRows: Story = {
           background: #f0f0f0;
         }
       `}</style>
-			<ReactTimeline {...args} />
+			<Timeline {...args} />
 		</>
 	)
 };
