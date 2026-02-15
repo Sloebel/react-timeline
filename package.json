@@ -22,6 +22,7 @@
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,md}\"",
     "lint": "eslint src",
     "prepare": "husky",
     "prebuild": "npm run typecheck",
@@ -33,7 +34,7 @@
     "test:watch": "vitest"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": ["eslint --fix"]
+    "src/**/*.{ts,tsx}": ["eslint --fix", "prettier --write"]
   },
   "peerDependencies": {
     "react": ">=18.0.0",
@@ -50,6 +51,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^8.57.1",
+    "prettier": "^3.4.2",
     "@storybook/addon-docs": "^10.2.8",
     "@storybook/react": "^10.2.8",
     "@storybook/react-vite": "^10.2.8",
