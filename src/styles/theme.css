@@ -1,4 +1,10 @@
 /* Theme variables for react-timeline (fallbacks for standalone use) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --white-bg: #ffffff;
   --gray-50: #f9fafb;
