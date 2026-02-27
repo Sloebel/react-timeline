@@ -210,7 +210,7 @@ const GridRow = ({
 			ref={ref}
 			style={style}
 			className={classNames(styles.gridRow, className, `timeline-row-${row.rowId}`)}
-			data-testid={`timeline-row-${row.rowId}`}
+			data-test-id={`timeline-row-${row.rowId}`}
 		>
 			{generateItems(sortedItems)}
 		</div>

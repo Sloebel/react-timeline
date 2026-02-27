@@ -1,62 +1,62 @@
 @use '../../styles/mixins.module.scss' as mixins;
 
 .timelineHeader {
-  width: 100%;
-  height: #{mixins.$time-Axis-Height}px;
-  overflow: hidden;
+	width: 100%;
+	height: #{mixins.$time-Axis-Height}px;
+	overflow: hidden;
 
-  background: var(--timeline-axis-bg);
-  color: var(--timeline-axis-color);
+	background: var(--timeline-axis-bg);
+	color: var(--timeline-axis-color);
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+	&::-webkit-scrollbar {
+		display: none;
+	}
 
-  .daysRow {
-    position: relative;
-    height: #{mixins.$time-Axis-Height - mixins.$row-height}px;
+	.daysRow {
+		position: relative;
+		height: #{mixins.$time-Axis-Height - mixins.$row-height}px;
 
-    .dayMarker {
-      position: absolute;
-      height: 100%;
-      border-left: 1px solid var(--timeline-grid-line-color);
-    }
+		.dayMarker {
+			position: absolute;
+			height: 100%;
+			border-left: 1px solid var(--timeline-grid-line-color);
+		}
 
-    .dayValue {
-      position: absolute;
-      height: 100%;
-      display: flex;
-      align-items: end;
-      padding: 4px;
-      font-size: 14px;
-    }
-  }
+		.dayValue {
+			position: absolute;
+			height: 100%;
+			display: flex;
+			align-items: end;
+			padding: 4px;
+			font-size: 14px;
+		}
+	}
 
-  .hoursRow {
-    position: relative;
-    height: #{mixins.$row-height}px;
-    border-top: 1px solid var(--timeline-row-border-color);
-    border-bottom: 1px solid var(--timeline-row-border-color);
+	.hoursRow {
+		position: relative;
+		height: #{mixins.$row-height}px;
+		border-top: 1px solid var(--timeline-row-border-color);
+		border-bottom: 1px solid var(--timeline-row-border-color);
 
-    .hourMarker {
-      position: absolute;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      font-size: 12px;
+		.hourMarker {
+			position: absolute;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			font-size: 12px;
 
-      &::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        width: 1px;
-        height: 8px;
-        background: var(--timeline-grid-line-color);
-      }
-    }
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				width: 1px;
+				height: 8px;
+				background: var(--timeline-grid-line-color);
+			}
+		}
 
-    .hourValue {
-      transform: translateX(-50%);
-    }
-  }
+		.hourValue {
+			transform: translateX(-50%);
+		}
+	}
 }

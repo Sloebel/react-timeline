@@ -43,6 +43,7 @@ export default [
       "no-this-before-super": "off",
       "no-unreachable": "off",
       "no-unsafe-negation": "off",
+      "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
       "no-var": "error",
       "no-alert": "error",
       "no-shadow": "warn",

@@ -291,7 +291,7 @@ const Timeline = forwardRef<TimelinePublicApi, Props>(
 			<>
 				<div
 					className={classNames(styles.timelineContainer, className)}
-					data-testid="timeline"
+					data-test-id="timeline"
 					onClick={(e: React.MouseEvent) => {
 						onClick?.(e);
 					}}
