@@ -20,6 +20,7 @@
 	--timeline-grid-line-color: var(--gray-150);
 	--timeline-day-line-color: var(--gray-400);
 	--timeline-row-border-color: var(--gray-150);
+	--timeline-row-hover-bg: var(--gray-50);
 	--timeline-row-height: 32px;
 
 	/* Timeline items */
