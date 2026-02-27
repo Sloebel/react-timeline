@@ -24,7 +24,7 @@ $scroll-bar-border-radius: $scroll-bar-height;
 
 	&:hover {
 		.track {
-			background-color: rgba(0, 0, 0, 0.3);
+			background-color: var(--timeline-scrollbar-track-hover-color);
 		}
 	}
 
@@ -51,7 +51,7 @@ $scroll-bar-border-radius: $scroll-bar-height;
 	.thumb {
 		position: absolute;
 		height: $scroll-bar-height;
-		background-color: rgba(0, 0, 0, 0.4);
+		background-color: var(--timeline-scrollbar-thumb-color);
 		border-radius: $scroll-bar-border-radius;
 	}
 }
