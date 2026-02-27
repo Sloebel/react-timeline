@@ -40,6 +40,10 @@
 	/* Current time bar */
 	--timeline-now-bar-color: var(--sunset);
 
+	/* Scrollbar */
+	--timeline-scrollbar-thumb-color: rgba(0, 0, 0, 0.4);
+	--timeline-scrollbar-track-hover-color: rgba(0, 0, 0, 0.3);
+
 	/* Zoom controls */
 	--timeline-controls-bg: var(--gray-50);
 	--timeline-controls-border-color: var(--gray-200);

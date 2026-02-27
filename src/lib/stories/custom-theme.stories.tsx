@@ -36,6 +36,8 @@ const darkThemeVars = `
     --timeline-controls-button-color: #e5e7eb;
     --timeline-controls-button-hover-bg: #374151;
     --timeline-controls-button-focus-outline: #6b7280;
+    --timeline-scrollbar-thumb-color: rgba(255, 255, 255, 0.4);
+    --timeline-scrollbar-track-hover-color: rgba(255, 255, 255, 0.3);
   }
 `;
 
@@ -127,7 +129,9 @@ const DarkThemeVariables = [
 	'--timeline-controls-border-color',
 	'--timeline-controls-button-color',
 	'--timeline-controls-button-hover-bg',
-	'--timeline-controls-button-focus-outline'
+	'--timeline-controls-button-focus-outline',
+	'--timeline-scrollbar-thumb-color',
+	'--timeline-scrollbar-track-hover-color'
 ];
 
 const ColoredItemsVariables = [
